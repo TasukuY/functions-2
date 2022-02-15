@@ -39,7 +39,7 @@ const prices = [15.00, 23.00, 78.00, 34.00, 12.00, 86.00, 12.00, 79.00, 32.00];
 
 // CODE HERE
 const postTaxPrices = prices.map(price => Math.round((price * 1.07) * 100) / 100);
-console.log(postTaxPrices);
+//console.log(postTaxPrices);
 
 
 ////////// PROBLEM 3 //////////
@@ -56,33 +56,33 @@ const populations = [8175133, 3792621, 2695598, 2100263];
 */
 
 // CODE HERE
-const totalPopulation //  = populations.reduce(/* Provide Your Callback Here */)
+const totalPopulation = populations.reduce((accumulator, currentElemnt) => accumulator + currentElemnt);
+//console.log(totalPopulation);
 
 
+////////// PROBLEM 4 //////////
 
-// ////////// PROBLEM 4 //////////
+// Do not edit the code below.
+const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
+{"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
+{"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
+{"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
+{"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
+{"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},{"monster":"Bulbabunny","CP":247},
+{"monster":"Charaflier","CP":55},{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
+{"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
+{"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}];
+// Do not edit the code above.
 
-// // Do not edit the code below.
-// const monstersInYourPocket = [{"monster":"Bulbabunny","CP":156},{"monster":"Bulbabunny","CP":135},
-// {"monster":"Bulbabunny","CP":250},{"monster":"Ponylopse","CP":277},{"monster":"Ponylopse","CP":184},
-// {"monster":"Pikadoughnet","CP":207},{"monster":"Bulbabunny","CP":139},{"monster":"Pikadoughnet","CP":47},
-// {"monster":"Pikadoughnet","CP":175},{"monster":"WaterHorsia","CP":26},{"monster":"Ponylopse","CP":19},
-// {"monster":"Pikadoughnet","CP":218},{"monster":"Charaflier","CP":101},{"monster":"WaterHorsia","CP":96},
-// {"monster":"Pikadoughnet","CP":253},{"monster":"Sandmush","CP":146},{"monster":"Bulbabunny","CP":247},
-// {"monster":"Charaflier","CP":55},{"monster":"Bulbabunny","CP":72},{"monster":"Pikadoughnet","CP":300},
-// {"monster":"Sandmush","CP":262},{"monster":"Sandmush","CP":25},{"monster":"Charaflier","CP":215},
-// {"monster":"Ponylopse","CP":125},{"monster":"Bulbabunny","CP":178}];
-// // Do not edit the code above.
+/*
+  Now we're going to ramp these up a little bit.
+  Instead of just arrays of numbers, we are going to have array of objects that we want to use map, filter, and reduce with.
+  Use the filter method to return only the monsters that have a CP of over 200.
+*/
 
-// /*
-//   Now we're going to ramp these up a little bit.
-//   Instead of just arrays of numbers, we are going to have array of objects that we want to use map, filter, and reduce with.
-//   Use the filter method to return only the monsters that have a CP of over 200.
-// */
-
-// // CODE HERE
-// const myStrongest // = monstersInYourPocket.filter(/* Provide Your Callback Here */)
-
+// CODE HERE
+const myStrongest = monstersInYourPocket.filter(obj => obj.CP > 200);
+//console.log(myStrongest);
 
 
 // ////////// PROBLEM 5 //////////
