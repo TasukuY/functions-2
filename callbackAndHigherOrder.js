@@ -6,10 +6,9 @@
 */
 
 // CODE HERE
-let multiply = (num1, num2, func) =>{
-    func(num1, num2);
-};
-
+const multiply = (num1, num2, cb) => {
+  return cb(num1 * num2)
+}
 
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
