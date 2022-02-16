@@ -6,24 +6,22 @@
 */
 
 // CODE HERE
-function multiply(num1, num2, callback){
-  callback(num1, num2)
+let multiply = (num1, num2, callback) =>{
+  return callback(num1, num2);
+};
+
+function answer(num1, num2){
+  return num1 * num2;
 }
 
-// let callback = (num1, num2) => {
-//   return num1 * num2;
-// }
-
-//console.log(multiply(5,3,callback))
+//console.log(multiply(5,3,answer))
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-  multiply(4, 3, answer => {
-  console.log('The answer is ' + answer) //should console.log 12
-})
-//Question of control flow!!
-
+// multiply(4, 3, answer => {
+//   console.log('The answer is ' + answer) //should console.log 12
+// })
 
 ////////// PROBLEMS 2 - 6 //////////
 
@@ -242,6 +240,13 @@ getUserById(users, '16t', user => {
 */
 
 // CODE HERE
+function addingFactory(num1){
+  return function(num2){
+    return num1 + num2;
+  }
+}
+
+const addingFactory2 = num1 => (num2) => num1 + num2;
 
 /*
   Now that you have addingFactory, you can create other
@@ -256,6 +261,7 @@ getUserById(users, '16t', user => {
 */
 
 // CODE HERE
+let addTen = addingFactory(10);
 
 /*
   Now the inner function is stored in the addTen variable! 
@@ -268,6 +274,8 @@ getUserById(users, '16t', user => {
 */
 
 // CODE HERE
+console.log(addTen(10));
+console.log(addTen(5));
 
 /*
   Let's make another function from the addingFactory. 
@@ -281,3 +289,6 @@ getUserById(users, '16t', user => {
 */
 
 // CODE HERE
+let addTwo = addingFactory(2);
+console.log(addTwo(10));
+
