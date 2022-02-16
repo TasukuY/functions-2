@@ -155,12 +155,15 @@ uniq2(names, uniqArr => {
 */
 
 // CODE HERE 
-function each(names, callback){
-  names.forEach((name, index) => {
-    callback(name, index)
+let each = (names, callback) => {
+  names.forEach(function(element, index){
+    callback(element, index);
   });
-}
+};
 
+let eachCallback = (element, index) => {
+  console.log(`The item at index ${index} is ${element}`);
+}
 
 /*
   Invoke the each function, passing in the names array and a callback function.
@@ -170,11 +173,7 @@ function each(names, callback){
 */
 
 // CODE HERE
-// each(names, callback => {
-//   console.log(callback);
-// });
-
-//not sure how to access the second parameter of callback....
+each(names, eachCallback);
 
 ////////// PROBLEM 7 //////////
 
