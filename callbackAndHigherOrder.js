@@ -6,22 +6,18 @@
 */
 
 // CODE HERE
-let multiply = (num1, num2, callback) =>{
-  return callback(num1, num2);
+let multiply = (num1, num2, func) =>{
+    func(num1, num2);
 };
 
-function answer(num1, num2){
-  return num1 * num2;
-}
 
-//console.log(multiply(5,3,answer))
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// multiply(4, 3, answer => {
-//   console.log('The answer is ' + answer) //should console.log 12
-// })
+multiply(4, 3, answer => {
+  console.log('The answer is ' + answer) //should console.log 12
+})
 
 ////////// PROBLEMS 2 - 6 //////////
 
@@ -121,7 +117,6 @@ contains(names, 'Colt', result => {
 
 // CODE HERE
 function uniq(arr, callback){
-  let newArr = [];
   for(let i = 0; i < arr.length; i++){
     let checkItem = arr[i];
     for(let j = i+1; j < arr.length; j++){
@@ -133,6 +128,13 @@ function uniq(arr, callback){
   callback(arr);
 }
 
+function uniq2(arr, callback){
+  let setObj = new Set(arr);
+  let newArr = [...setObj];
+
+  callback(newArr);
+}
+
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -141,7 +143,7 @@ function uniq(arr, callback){
 */
 
 // CODE HERE
-uniq(names, uniqArr => {
+uniq2(names, uniqArr => {
   console.log(`The new names array with all the duplicate items removed is ${uniqArr}.`);
 });
 
