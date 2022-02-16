@@ -101,23 +101,31 @@ const orders = [{"price":15,"tax":0.09},{"price":42,"tax":0.07},{"price":56,"tax
 */
 
 // CODE HERE
+const postTaxOrderPrices = orders.map(order => Math.round((order.price * (order.tax + 1)) * 100) / 100);
+//console.log(postTaxOrderPrices);
 
+////////// PROBLEM 6 //////////
 
+// Do not edit the code below.
+const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
+{"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
+{"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
+{"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
+{"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
+{"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
+{"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
+// Do not edit the code above.
 
-// ////////// PROBLEM 6 //////////
+/*
+  Use a high order method(s) to create to get the sum of bobsTotal.
+*/
 
-// // Do not edit the code below.
-// const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
-// {"owner":"Bob","price":73},{"owner":"Barry","price":57},{"owner":"Barry","price":128},
-// {"owner":"Bob","price":119},{"owner":"Barry","price":133},{"owner":"Barry","price":27},
-// {"owner":"Barry","price":138},{"owner":"Bob","price":68},{"owner":"Bob","price":50},
-// {"owner":"Barry","price":9},{"owner":"Bob","price":123},{"owner":"Bob","price":135},
-// {"owner":"Barry","price":30},{"owner":"Barry","price":129},{"owner":"Barry","price":38},
-// {"owner":"Bob","price":133},{"owner":"Barry","price":109},{"owner":"Bob","price":115}];
-// // Do not edit the code above.
+// CODE HERE
 
-// /*
-//   Use a high order method(s) to create to get the sum of bobsTotal.
-// */
+//const bobsObjects = purchases.filter(obj => obj.owner === "Bob");
+const bobsTotal = purchases.filter(obj => obj.owner === "Bob").reduce(function(accObje, currObj){
+  return {price: accObje.price + currObj.price};
+});
 
-// // CODE HERE
+//console.log(bobsObjects);
+console.log(bobsTotal);
